@@ -89,3 +89,25 @@ EXIT
 
 
 
+## here are ss attchaed with examples 
+
+
+
+<img width="959" height="187" alt="Screenshot 2025-07-30 225055" src="https://github.com/user-attachments/assets/5234e496-8ce4-4dd9-b12a-9964f3f6fe1b" />
+
+
+
+<img width="1026" height="247" alt="Screenshot 2025-07-30 225122" src="https://github.com/user-attachments/assets/c94eeeea-98ff-4369-b508-aba41dc6c511" />
+
+
+
+<img width="1035" height="225" alt="Screenshot 2025-07-30 225140" src="https://github.com/user-attachments/assets/0fda3c5d-826a-4ffd-a21c-27e75ad6d3b9" />
+
+
+<img width="1028" height="290" alt="Screenshot 2025-07-30 225145" src="https://github.com/user-attachments/assets/47f8f0b2-cf85-46fa-bcbc-217d3737dcdb" />
+
+
+
+
+
+
