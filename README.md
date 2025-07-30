@@ -2,7 +2,7 @@
 
 A lightweight publish-subscribe messaging server implemented exclusively with Go’s standard library. Clients connect over plain TCP and issue newline-delimited commands to subscribe, publish, and unsubscribe from topics.
 
-⚡ **Highlights**
+ **Highlights**
 
 * Pure Go 1.22 – no external deps
 * Concurrent fan-out with goroutines & channels
@@ -69,19 +69,8 @@ EXIT
 
 ## Architecture Overview
 
-```mermaid
-flowchart TD
-    A["Client"] -- "commands" --> S["Server"]
-    subgraph "Server"
-      B["Command parser"]
-      C["Broker<br/>map[topic][]chan"]
-      D["Forwarder goroutine"]
-    end
+<img width="580" height="1140" alt="image" src="https://github.com/user-attachments/assets/441b4954-4d1b-475c-86b9-31d86a48a485" />
 
-    B --> C
-    C -- "fan-out" --> D
-    D -- "messages" --> A
-```
 
 * **Broker** – central hub maintaining `map[string]map[chan string]struct{}`.
 * **Concurrency** – each client connection has two goroutines:
@@ -98,12 +87,27 @@ flowchart TD
   (Then restart PowerShell so `ncat` is on PATH.)
 * Or enable Telnet: `dism /online /Enable-Feature /FeatureName:TelnetClient`
 
-### Linux / macOS
-* Debian/Ubuntu: `sudo apt install netcat-openbsd`
-* macOS (Homebrew): `brew install nmap` (includes ncat)
 
----
 
-## License
+## here are ss attchaed with examples 
 
-MIT – do whatever you want, just preserve copyright.
+
+
+<img width="959" height="187" alt="Screenshot 2025-07-30 225055" src="https://github.com/user-attachments/assets/5234e496-8ce4-4dd9-b12a-9964f3f6fe1b" />
+
+
+
+<img width="1026" height="247" alt="Screenshot 2025-07-30 225122" src="https://github.com/user-attachments/assets/c94eeeea-98ff-4369-b508-aba41dc6c511" />
+
+
+
+<img width="1035" height="225" alt="Screenshot 2025-07-30 225140" src="https://github.com/user-attachments/assets/0fda3c5d-826a-4ffd-a21c-27e75ad6d3b9" />
+
+
+<img width="1028" height="290" alt="Screenshot 2025-07-30 225145" src="https://github.com/user-attachments/assets/47f8f0b2-cf85-46fa-bcbc-217d3737dcdb" />
+
+
+
+
+
+
