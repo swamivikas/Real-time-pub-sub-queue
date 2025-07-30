@@ -2,7 +2,7 @@
 
 A lightweight publish-subscribe messaging server implemented exclusively with Go’s standard library. Clients connect over plain TCP and issue newline-delimited commands to subscribe, publish, and unsubscribe from topics.
 
-⚡ **Highlights**
+ **Highlights**
 
 * Pure Go 1.22 – no external deps
 * Concurrent fan-out with goroutines & channels
@@ -69,19 +69,17 @@ EXIT
 
 ## Architecture Overview
 
-```mermaid
 flowchart TD
-    A[Client] --commands--> S(Server)
-    subgraph Server
-      B[Command parser]
-      C[Broker\nmap[topic][]chan]
-      D[Forwarder goroutine]
+    A["Client"] -- "commands" --> S["Server"]
+    subgraph "Server"
+      B["Command parser"]
+      C["Broker<br/>map[topic][]chan"]
+      D["Forwarder goroutine"]
     end
 
     B --> C
-    C --fan-out--> D
-    D --messages--> A
-```
+    C -- "fan-out" --> D
+    D -- "messages" --> A
 
 * **Broker** – central hub maintaining `map[string]map[chan string]struct{}`.
 * **Concurrency** – each client connection has two goroutines:
