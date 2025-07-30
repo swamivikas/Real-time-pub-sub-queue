@@ -69,17 +69,8 @@ EXIT
 
 ## Architecture Overview
 
-flowchart TD
-    A["Client"] -- "commands" --> S["Server"]
-    subgraph "Server"
-      B["Command parser"]
-      C["Broker<br/>map[topic][]chan"]
-      D["Forwarder goroutine"]
-    end
+<img width="580" height="1140" alt="image" src="https://github.com/user-attachments/assets/441b4954-4d1b-475c-86b9-31d86a48a485" />
 
-    B --> C
-    C -- "fan-out" --> D
-    D -- "messages" --> A
 
 * **Broker** – central hub maintaining `map[string]map[chan string]struct{}`.
 * **Concurrency** – each client connection has two goroutines:
@@ -96,12 +87,5 @@ flowchart TD
   (Then restart PowerShell so `ncat` is on PATH.)
 * Or enable Telnet: `dism /online /Enable-Feature /FeatureName:TelnetClient`
 
-### Linux / macOS
-* Debian/Ubuntu: `sudo apt install netcat-openbsd`
-* macOS (Homebrew): `brew install nmap` (includes ncat)
 
----
 
-## License
-
-MIT – do whatever you want, just preserve copyright.
