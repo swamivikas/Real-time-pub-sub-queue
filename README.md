@@ -71,16 +71,16 @@ EXIT
 
 ```mermaid
 flowchart TD
-    A[Client] --commands--> S(Server)
-    subgraph Server
-      B[Command parser]
-      C[Broker\nmap[topic][]chan]
-      D[Forwarder goroutine]
+    A["Client"] -- "commands" --> S["Server"]
+    subgraph "Server"
+      B["Command parser"]
+      C["Broker<br/>map[topic][]chan"]
+      D["Forwarder goroutine"]
     end
 
     B --> C
-    C --fan-out--> D
-    D --messages--> A
+    C -- "fan-out" --> D
+    D -- "messages" --> A
 ```
 
 * **Broker** – central hub maintaining `map[string]map[chan string]struct{}`.
